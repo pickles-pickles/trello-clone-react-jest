@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Ubuntu;
+  src: local('Ubuntu'), url(./fonts/Ubuntu/Ubuntu-Medium.ttf) format('truetype');
+}
+
+body {
+  font-family: 'Ubuntu', Times, serif;
+}
+
+p {
+  font-size: 20px;
+}
+.header-logo {
+  width: 126px;
+  height: 46px;
+}
+
+#its-free:hover {
+  text-decoration: none !important;
+}
+
+button .btn-primary:hover {
+  text-decoration: none;
+}
+
+#checkout hr {
+  border-color: black;
+}
+
+#apps {
+  background-color: #fafbfc;
+}
+
+#language-picker {
+  width: 20%;
+  box-shadow: none;
+  border-color: grey;
+}
+
+footer ul li {
+  text-decoration: underline;
+}
+
+#copyright {
+  margin-bottom: 17%;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  #copyright {
+    margin-bottom: 7%;
+  }
+}
