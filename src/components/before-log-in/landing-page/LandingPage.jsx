@@ -7,7 +7,7 @@ import CustomerStories from './CustomerStories'
 import Header from './Header'
 import Product from './Product'
 import Signup from './Signup'
-import Footer from '../../Footer'
+import Footer from '../footer/Footer'
 
 const LandingPage = () => {
   const [appState, setAppState] = useContext(Context)
