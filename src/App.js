@@ -9,8 +9,7 @@ import SignupPage from './components/before-log-in/signup-login/SignupPage'
 import Private from './components/after-login/Private'
 import PrivateRoute from './components/PrivateRoute'
 import { ContextProvider } from './Context'
-import URLChecker from './components/URLChecker'
-import Demo from './components/Demo'
+//import Demo from './components/Demo'
 
 function App () {
   return (
@@ -27,15 +26,12 @@ function App () {
             <Route path='/signup'>
               <SignupPage></SignupPage>
             </Route>
-            <Route path='/demo'>
-              <Demo></Demo>
-            </Route>
+
             <PrivateRoute
               exact
               path='/private'
               component={Private}
             ></PrivateRoute>
-            <URLChecker></URLChecker>
           </Switch>
         </Router>
       </ContextProvider>

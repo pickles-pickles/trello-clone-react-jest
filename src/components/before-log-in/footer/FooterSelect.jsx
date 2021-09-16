@@ -20,7 +20,7 @@ const FooterSelect = () => {
         }
       }}
     >
-      <option value='choose-one' id='choose' disabled='true' selected>
+      <option defaultValue='choose-one' id='choose' disabled={true}>
         Select your language…
       </option>
       <option value='cs'>Čeština</option>

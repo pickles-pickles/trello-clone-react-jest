@@ -7,24 +7,24 @@ const Checkout = () => {
         <div className=' my-5 py-4'>
           <hr></hr>
           <div className='row align-items-stretch'>
-            <div class='col-md-6'>
-              <div class='row h-100'>
-                <div class='d-none d-lg-flex col-lg-3 align-items-start'>
+            <div className='col-md-6'>
+              <div className='row h-100'>
+                <div className='d-none d-lg-flex col-lg-3 align-items-start'>
                   <img
                     src='assets/landing-page/tag.svg'
-                    class='img-fluid'
+                    className='img-fluid'
                     alt=''
                   />
                 </div>
-                <div class='col-lg-9 d-flex flex-column mb-4 mb-lg-0'>
+                <div className='col-lg-9 d-flex flex-column mb-4 mb-lg-0'>
                   <h3>See our pricing</h3>
                   <p>
                     Whether you’re a team of 2 or 2,000, there’s a Trello
                     tailor-made for your organization.
                   </p>
-                  <p class='m-0'>
+                  <p className='m-0'>
                     <a
-                      class='btn btn-outline-primary btn-sm px-4'
+                      className='btn btn-outline-primary btn-sm px-4'
                       href='/pricing'
                     >
                       Trello pricing
@@ -33,23 +33,26 @@ const Checkout = () => {
                 </div>
               </div>
             </div>
-            <div class='col-md-6'>
-              <div class='row h-100'>
-                <div class='d-none d-lg-flex col-lg-3 align-items-start'>
+            <div className='col-md-6'>
+              <div className='row h-100'>
+                <div className='d-none d-lg-flex col-lg-3 align-items-start'>
                   <img
                     src='assets/landing-page/compass.svg'
-                    class='img-fluid'
+                    className='img-fluid'
                     alt=''
                   />
                 </div>
-                <div class='col-lg-9 d-flex flex-column'>
+                <div className='col-lg-9 d-flex flex-column'>
                   <h3>Take a Trello tour</h3>
                   <p>
                     Explore the world of boards and beyond in Trello. Dive
                     deeper into our most popular features.
                   </p>
-                  <p class='m-0'>
-                    <a class='btn btn-outline-primary btn-sm px-4' href='/tour'>
+                  <p className='m-0'>
+                    <a
+                      className='btn btn-outline-primary btn-sm px-4'
+                      href='/tour'
+                    >
                       Tour Trello
                     </a>
                   </p>

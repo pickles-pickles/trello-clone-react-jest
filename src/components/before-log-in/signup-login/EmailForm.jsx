@@ -17,14 +17,13 @@ const EmailInput = () => {
         <input
           type='email'
           name='email'
-          id='email'
           className='form-control mb-2'
-          tabIndex='0'
-          autoCorrect='off'
-          spellcheck='false'
-          autoCapitalize='none'
+          /* tabIndex='0' */
+          /* autoCorrect='off'
+          spellCheck='false'
+          autoCapitalize='none' */
           placeholder='Enter email'
-          autoComplete='username email'
+          /*   autoComplete='username email' */
           value={appState.emailValue}
           onChange={e => {
             setAppState({ ...appState, emailValue: e.target.value })
@@ -36,13 +35,12 @@ const EmailInput = () => {
           <input
             type='password'
             name='password'
-            id='password'
             className='form-control'
-            tabIndex='0'
+            /*  tabIndex='0'
             autoCorrect='off'
-            spellcheck='false'
+            spellCheck='false'
             autoCapitalize='none'
-            placeholder='Enter password'
+            placeholder='Enter password' */
             onChange={e => {
               setAppState({ ...appState, passwordValue: e.target.value })
               // $$ to be removed in production
@@ -70,7 +68,7 @@ const EmailInput = () => {
 
         <input
           id='signup-submit'
-          tabindex='0'
+          /* tabindex='0' */
           type='submit'
           className={
             appState.isInSignupPage === true && appState.emailValue === ''
@@ -78,7 +76,7 @@ const EmailInput = () => {
               : 'btn-success btn btn-block'
           }
           value='Continue'
-          disabled=''
+          /* disabled={false} */
         ></input>
       </form>
     </>

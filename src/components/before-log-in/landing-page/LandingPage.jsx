@@ -86,7 +86,7 @@ const LandingPage = () => {
           <div className='row py-5'>
             <div className='col-md-5 mb-3 mb-md-0'>
               <img
-                src='assets/landing-page/view.svg'
+                src='https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/spirit/features/5f90e4a913ac52092f2ac7ff308c45c4/view.svg'
                 alt=''
                 className='img-fluid w-100'
               />
