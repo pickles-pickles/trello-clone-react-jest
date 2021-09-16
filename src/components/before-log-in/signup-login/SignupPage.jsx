@@ -32,7 +32,7 @@ const SignupPage = () => {
       setAppState({ ...appState, isInLoginPage: false })
     }
 
-    console.log('location is ', history.location.pathname)
+    console.log('location is ', history.location.pathname) // eslint-disable-next-line
   }, [history])
   useEffect(() => checkURL(), [checkURL])
   //$$
