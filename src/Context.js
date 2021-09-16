@@ -19,6 +19,9 @@ const ContextProvider = ({ children }) => {
       console.log('hey')
       console.log(appState)
     },
+    alertDemo: function () {
+      alert('This is a demo version. This feature is disabled.')
+    },
     icons: [
       {
         url:

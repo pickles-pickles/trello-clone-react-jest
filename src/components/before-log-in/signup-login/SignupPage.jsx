@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useCallback } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Context } from '../../../Context'
 /* import { Link } from 'react-router-dom'
@@ -12,7 +12,7 @@ const SignupPage = () => {
   const [appState, setAppState] = useContext(Context)
   //$$ TO BE MADE CUSTOM HOOK
   const history = useHistory()
-  useEffect(() => {
+  const checkURL = useCallback(() => {
     console.log(history)
     if (history.location.pathname !== '/') {
       setAppState({ ...appState, isInLandingPage: false })
@@ -34,6 +34,7 @@ const SignupPage = () => {
 
     console.log('location is ', history.location.pathname)
   }, [history])
+  useEffect(() => checkURL(), [checkURL])
   //$$
 
   return (

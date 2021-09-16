@@ -50,23 +50,18 @@ const EmailInput = () => {
             }}
           />
         ) : null}
+
         <NameInput />
+
         {appState.isInSignupPage ? null : (
           <p className='text-muted font-12 mt-4'>
             By signing up, you confirm that you've read and accepted our
-            <a
-              href='/legal'
-              target='_blank'
-              data-analytics-event='clickedSignUpTOSLink'
-            >
+            <span> </span>
+            <a href='/#/demo' target='_blank'>
               Terms of Service
             </a>
-            and
-            <a
-              href='/privacy'
-              target='_blank'
-              data-analytics-event='clickedSignUpPrivacyLink'
-            >
+            <span> and </span>
+            <a href='/#/demo' target='_blank'>
               Privacy Policy
             </a>
             .
@@ -83,7 +78,6 @@ const EmailInput = () => {
               : 'btn-success btn btn-block'
           }
           value='Continue'
-          data-analytics-button='signUpCreateAccountButton'
           disabled=''
         ></input>
       </form>

@@ -10,6 +10,8 @@ import Private from './components/after-login/Private'
 import PrivateRoute from './components/PrivateRoute'
 import { ContextProvider } from './Context'
 import URLChecker from './components/URLChecker'
+import Demo from './components/Demo'
+
 function App () {
   return (
     <div className='App'>
@@ -24,6 +26,9 @@ function App () {
             </Route>
             <Route path='/signup'>
               <SignupPage></SignupPage>
+            </Route>
+            <Route path='/demo'>
+              <Demo></Demo>
             </Route>
             <PrivateRoute
               exact
