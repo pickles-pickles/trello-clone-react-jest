@@ -16,7 +16,7 @@ const ContextProvider = ({ children }) => {
     isInLoginPage: false,
     isEmailSubmitted: false,
     login: function () {
-      console.log('hey')
+      console.log('hey, i was logged in')
       console.log(appState)
     },
     alertDemo: function () {

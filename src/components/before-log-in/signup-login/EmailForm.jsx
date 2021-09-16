@@ -1,5 +1,4 @@
-import React from 'react'
-import { useContext } from 'react/cjs/react.development'
+import React, { useContext } from 'react'
 import { Context } from '../../../Context'
 import NameInput from './NameInput'
 
@@ -18,10 +17,10 @@ const EmailInput = () => {
           type='email'
           name='email'
           className='form-control mb-2'
-          /* tabIndex='0' */
-          /* autoCorrect='off'
-          spellCheck='false'
-          autoCapitalize='none' */
+          tabIndex='0'
+          autoCorrect='off'
+          spellCheck={false}
+          autoCapitalize='none'
           placeholder='Enter email'
           /*   autoComplete='username email' */
           value={appState.emailValue}
@@ -36,11 +35,11 @@ const EmailInput = () => {
             type='password'
             name='password'
             className='form-control'
-            /*  tabIndex='0'
+            tabIndex='0'
             autoCorrect='off'
-            spellCheck='false'
+            spellCheck={false}
             autoCapitalize='none'
-            placeholder='Enter password' */
+            placeholder='Enter password'
             onChange={e => {
               setAppState({ ...appState, passwordValue: e.target.value })
               // $$ to be removed in production
@@ -68,7 +67,7 @@ const EmailInput = () => {
 
         <input
           id='signup-submit'
-          /* tabindex='0' */
+          tabIndex='0'
           type='submit'
           className={
             appState.isInSignupPage === true && appState.emailValue === ''
@@ -76,7 +75,7 @@ const EmailInput = () => {
               : 'btn-success btn btn-block'
           }
           value='Continue'
-          /* disabled={false} */
+          disabled={false}
         ></input>
       </form>
     </>

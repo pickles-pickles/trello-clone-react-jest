@@ -1,12 +1,11 @@
-import React from 'react'
-import { useContext } from 'react/cjs/react.development'
+import React, { useContext } from 'react'
 import { Context } from '../../../Context'
 
 const NameInput = () => {
   const [appState, setAppState] = useContext(Context)
   return (
     <>
-      {appState.isEmailSubmitted && appState.isInSignupPage ? (
+      {appState.isEmailSubmitted ? (
         <input
           className='form-control mb-2'
           placeholder='Enter full name'

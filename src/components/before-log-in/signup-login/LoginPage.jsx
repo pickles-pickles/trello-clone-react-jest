@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useCallback } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { Context } from '../../../Context'
 import CentralDiv from './CentralDiv'
 import BackgroundImages from './BackgroundImages'
@@ -8,29 +8,29 @@ import { Link } from 'react-router-dom'
 const LoginPage = () => {
   const [appState, setAppState] = useContext(Context)
   //$$ TO BE MADE CUSTOM HOOK
-  const history = useHistory()
+  const location = useLocation()
   const checkURL = useCallback(() => {
-    console.log(history)
-    if (history.location.pathname !== '/') {
+    console.log(location)
+    if (location.pathname !== '/') {
       setAppState({ ...appState, isInLandingPage: false })
     }
-    if (history.location.pathname === '/signup') {
+    if (location.pathname === '/signup') {
       setAppState({ ...appState, isInSignupPage: true })
 
       console.log('I am in sign up from outside')
     }
-    if (history.location.pathname !== '/signup') {
+    if (location.pathname !== '/signup') {
       setAppState({ ...appState, isInSignupPage: false })
     }
-    if (history.location.pathname === '/login') {
+    if (location.pathname === '/login') {
       setAppState({ ...appState, isInLoginPage: true })
     }
-    if (history.location.pathname !== '/login') {
+    if (location.pathname !== '/login') {
       setAppState({ ...appState, isInLoginPage: false })
     }
 
-    console.log('location is ', history.location.pathname) // eslint-disable-next-line
-  }, [history])
+    console.log('location is ', location.pathname) // eslint-disable-next-line
+  }, [location])
   useEffect(() => checkURL(), [checkURL])
   //$$
 
