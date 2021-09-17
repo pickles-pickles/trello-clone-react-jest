@@ -4,7 +4,7 @@ const Checkout = () => {
   return (
     <section id='checkout'>
       <div className='container'>
-        <div className=' my-5 py-4'>
+        <div className=' mt-5 mb-3 py-4'>
           <hr></hr>
           <div className='row align-items-stretch'>
             <div className='col-md-6'>

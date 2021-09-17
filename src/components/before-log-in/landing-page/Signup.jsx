@@ -4,7 +4,7 @@ import { Context } from '../../../Context'
 const Signup = () => {
   const [appState, setAppState] = useContext(Context)
   return (
-    <section id='sign-up'>
+    <section id='sign-up' className='mt-5'>
       <div
         className='container py-5'
         style={{

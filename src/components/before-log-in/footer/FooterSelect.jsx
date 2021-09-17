@@ -7,6 +7,7 @@ const FooterSelect = () => {
       name='language-picker'
       id='language-picker'
       aria-label='Default select example'
+      defaultValue='choose-one'
       onChange={e => {
         if (
           e.target.value !== 'en' &&
@@ -20,7 +21,7 @@ const FooterSelect = () => {
         }
       }}
     >
-      <option defaultValue='choose-one' id='choose' disabled={true}>
+      <option value='choose-one' id='choose' disabled={true}>
         Select your language…
       </option>
       <option value='cs'>Čeština</option>

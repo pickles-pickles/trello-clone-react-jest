@@ -1,9 +1,12 @@
 import React from 'react'
+import Carousel from './Carousel'
 
 const CustomerStories = () => {
   return (
     <>
-      <h1>Just some text. Will be replaced with a carousel</h1>
+      <div className='w-100'>
+        <Carousel></Carousel>
+      </div>
     </>
   )
 }
