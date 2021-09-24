@@ -1,11 +1,8 @@
 import React from 'react'
+import LandingPage from './landing-page/LandingPage'
 
 const Private = () => {
-  return (
-    <h1 style={{ color: 'red' }}>
-      Hello from Private. This will display the private components
-    </h1>
-  )
+  return <LandingPage></LandingPage>
 }
 
 export default Private

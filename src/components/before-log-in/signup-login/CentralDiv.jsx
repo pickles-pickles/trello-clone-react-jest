@@ -1,5 +1,5 @@
 /* import React, { useContext, useEffect, useCallback } from 'react' */
-import React from 'react'
+import React, { useContext } from 'react'
 
 /* import { useHistory } from 'react-router-dom'
 import { Context } from '../../../Context' */
@@ -9,6 +9,7 @@ import FooterSelect from '../../before-log-in/footer/FooterSelect'
 import EmailInput from './EmailForm'
 import SocialButtons from './SocialButtons'
 import CentralDivTextLinks from './CentralDivTextLinks'
+import { Context } from '../../../Context'
 
 const CentralDiv = () => {
   /*   const [appState, setAppState] = useContext(Context) */
@@ -40,11 +41,15 @@ const CentralDiv = () => {
   //$$
 
   //$$
+
+  const [appState] = useContext(Context)
   return (
     <div className='' style={{ maxWidth: '400px' }}>
       <div className='container d-flex flex-column align-items-center justify-content-center shadow-lg rounded'>
         <div className='container  d-flex flex-column align-items-center justify-content-center'>
-          <h1 className='font-16 mt-5 mb-3'>Sign up for your account</h1>
+          <h1 className='font-16 mt-5 mb-3'>
+            {appState.isInSignupPage ? 'Sign up for' : 'Login to'} your account
+          </h1>
           <EmailInput />
           <div className='font-12 my-4'>OR</div>
           <SocialButtons />

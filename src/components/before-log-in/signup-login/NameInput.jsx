@@ -5,7 +5,7 @@ const NameInput = () => {
   const [appState, setAppState] = useContext(Context)
   return (
     <>
-      {appState.isEmailSubmitted ? (
+      {/* appState.isEmailSubmitted && */ appState.isInSignupPage ? (
         <input
           className='form-control mb-2'
           placeholder='Enter full name'

@@ -10,6 +10,7 @@ import Private from './components/after-login/Private'
 import PrivateRoute from './components/PrivateRoute'
 import { ContextProvider } from './Context'
 import Demo from './components/Demo'
+import { ContextPrivateProvider } from './ContextPrivate'
 
 function App () {
   return (
@@ -29,11 +30,13 @@ function App () {
             <Route path='/demo'>
               <Demo></Demo>
             </Route>
-            <PrivateRoute
-              exact
-              path='/private'
-              component={Private}
-            ></PrivateRoute>
+            <ContextPrivateProvider>
+              <PrivateRoute
+                exact
+                path='/private'
+                component={Private}
+              ></PrivateRoute>
+            </ContextPrivateProvider>
           </Switch>
         </Router>
       </ContextProvider>

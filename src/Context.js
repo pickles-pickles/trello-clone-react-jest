@@ -9,18 +9,34 @@ const ContextProvider = ({ children }) => {
     collapse3: true,
     collapse4: true,
     emailValue: '',
+    name: '',
     passwordValue: '',
-    isLogged: true,
+    isLogged: false,
     isInLandingPage: true,
     isInSignupPage: false,
     isInLoginPage: false,
     isEmailSubmitted: false,
-    login: function () {
-      console.log('hey, i was logged in')
-      console.log(appState)
-    },
     alertDemo: function () {
       alert('This is a demo version. This feature is disabled.')
+    },
+    readyToLogin: function () {
+      if (Boolean(this.emailValue) === true) {
+        if (
+          Boolean(this.name) === true ||
+          Boolean(this.passwordValue) === true
+        ) {
+          this.isLogged = true
+        }
+        console.log(
+          ' I was called from ready to login and isLogged: ',
+          this.isLogged,
+          'pass is ',
+          this.passwordValue,
+          'name is ',
+          this.name,
+          'form submitted'
+        )
+      }
     },
     icons: [
       {

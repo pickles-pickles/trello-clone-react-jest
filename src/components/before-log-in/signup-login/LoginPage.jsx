@@ -11,25 +11,37 @@ const LoginPage = () => {
   const location = useLocation()
   const checkURL = useCallback(() => {
     console.log(location)
-    if (location.pathname !== '/') {
+    /* if (location.pathname !== '/') {
       setAppState({ ...appState, isInLandingPage: false })
-    }
+    } */
     if (location.pathname === '/signup') {
-      setAppState({ ...appState, isInSignupPage: true })
-
-      console.log('I am in sign up from outside')
+      setAppState({
+        ...appState,
+        isInSignupPage: true,
+        isInLandingPage: false,
+        isInLoginPage: false
+      })
     }
-    if (location.pathname !== '/signup') {
+    /* if (location.pathname !== '/signup') {
       setAppState({ ...appState, isInSignupPage: false })
-    }
+    } */
     if (location.pathname === '/login') {
-      setAppState({ ...appState, isInLoginPage: true })
+      setAppState({
+        ...appState,
+        isInSignupPage: false,
+        isInLandingPage: false,
+        isInLoginPage: true
+      })
+      console.log(
+        'I am in log in and isInLoginPage is ',
+        appState.isInLoginPage
+      )
     }
-    if (location.pathname !== '/login') {
+    /* if (location.pathname !== '/login') {
       setAppState({ ...appState, isInLoginPage: false })
-    }
+    } */
 
-    console.log('location is ', location.pathname) // eslint-disable-next-line
+    console.log('location is ', appState.isInLoginPage) // eslint-disable-next-line
   }, [location])
   useEffect(() => checkURL(), [checkURL])
   //$$

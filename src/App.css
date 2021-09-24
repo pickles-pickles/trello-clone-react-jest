@@ -3,6 +3,10 @@
   src: local('Ubuntu'), url(./fonts/Ubuntu/Ubuntu-Medium.ttf) format('truetype');
 }
 
+:root {
+  --header-bg: #026aa7;
+}
+
 body {
   font-family: 'Ubuntu', Times, serif;
 }
@@ -90,6 +94,12 @@ footer ul li {
 }
 .background-right img {
   width: 83%;
+}
+
+.header-private {
+  background-color: var(--header-bg);
+  min-height: 44px;
+  max-height: 44px;
 }
 
 @media screen and (min-width: 640px) {
